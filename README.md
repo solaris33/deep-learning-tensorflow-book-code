@@ -1,4 +1,4 @@
-# 『텐서플로로 배우는 딥러닝』GitHub Repository
+# 『텐서플로로 배우는 딥러닝』 GitHub Repository
 [『텐서플로로 배우는 딥러닝』, 솔라리스, 영진닷컴, 2018] 도서의 소스코드입니다. 
 
 ![alt tag](/images/deep_learning_book_front_cover.png)
