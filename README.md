@@ -1,5 +1,7 @@
-# deep-learning-book-code
-deep learning book code
+# 『텐서플로로 배우는 딥러닝』GitHub Repository
+[『텐서플로로 배우는 딥러닝』, 솔라리스, 영진닷컴, 2018] 도서의 소스코드입니다. 
+
+![alt tag](/images/deep_learning_book_front_cover.png)
 
 ## Chapter 2 - 텐서플로우 소개
 - 텐서플로우 설치 체크 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch02-TensorFlow_Install/2.1-install_check.py)
