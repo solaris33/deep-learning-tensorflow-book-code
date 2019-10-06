@@ -4,13 +4,13 @@
 ![alt tag](/images/deep_learning_book_front_cover.png)
 
 ## Chapter 2 - 텐서플로우 소개
-- 텐서플로우 설치 체크 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch02-TensorFlow_Install/2.1-install_check.py)
+- 텐서플로우 설치 체크 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch02-TensorFlow_Install/2.1-install_check.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch02-TensorFlow_Install/2.1-install_check_v2.py) 
 
 ## Chapter 3 - 텐서플로우 기초와 텐서보드
-- 텐서플로우 기초 – 그래프 생성과 그래프 실행 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch03-TensorFlow_Basic/3.1-graph_example.py)
-- 플레이스홀더 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch03-TensorFlow_Basic/3.2-placeholder.py)
-- 선형 회귀(Linear Regression) 알고리즘 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch03-TensorFlow_Basic/3.3-linear_regression.py)
-- 선형 회귀(Linear Regression) 알고리즘 + 텐서보드(TensorBoard) [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch03-TensorFlow_Basic/3.4-linear_regression_with_tensorboard.py)
+- 텐서플로우 기초 – 그래프 생성과 그래프 실행 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch03-TensorFlow_Basic/3.1-graph_example.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch03-TensorFlow_Basic/3.1-graph_example_v2.py) 
+- 플레이스홀더 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch03-TensorFlow_Basic/3.2-placeholder.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch03-TensorFlow_Basic/3.2-placeholder_v2.py) 
+- 선형 회귀(Linear Regression) 알고리즘 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch03-TensorFlow_Basic/3.3-linear_regression.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch03-TensorFlow_Basic/3.3-linear_regression_v2.py)
+- 선형 회귀(Linear Regression) 알고리즘 + 텐서보드(TensorBoard) [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch03-TensorFlow_Basic/3.4-linear_regression_with_tensorboard.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch03-TensorFlow_Basic/3.4-linear_regression_with_tensorboard_v2.py)
 
 ## Chapter 4 - 머신러닝 기초 이론들
 - 소프트맥스 회귀(Softmax Regression)를 이용한 MNIST 숫자분류기 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch04-Machine_Learning_Basic/mnist_classification_using_softmax_regression.py)
@@ -48,3 +48,7 @@
 ## Chapter 13 - 파인튜닝(Fine-Tuning)과 Pre-Trained 모델을 이용해서 실제 문제 해결하기
 - Inception v3 Retraining을 이용해서 나만의 분류기 만들어보기 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/tree/master/Ch13-Fine-Tuning/Inceptionv3_retraining)
 - Pre-Trained 모델을 이용해서 Object Detection 수행하기 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/tree/master/Ch13-Fine-Tuning/faster_rcnn_object_detection/object_detection)
+
+## Revision History
+### 2019-10-06
+- Chapter 2,3 - TensorFlow 2.0 호환 코드 추가 - TF v2 Code
