@@ -31,8 +31,8 @@ def create_softmax_regression(x):
 # cross-entropy 손실 함수를 정의합니다.
 @tf.function
 def create_cross_entropy_loss(logits, y):
-  #return tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=logtis, labels=y)) # tf.nn.softmax_cross_entropy_with_logits API를 이용한 구
-  return tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(logits=logits, labels=y)) # tf.nn.sparse_softmax_cross_entropy_with_logits API를 이용한 구현현
+  #return tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=logtis, labels=y)) # tf.nn.softmax_cross_entropy_with_logits API를 이용한 구현
+  return tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(logits=logits, labels=y)) # tf.nn.sparse_softmax_cross_entropy_with_logits API를 이용한 구현
 
 # 모델의 정확도를 출력하는 함수를 정의합니다.
 @tf.function
