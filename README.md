@@ -25,7 +25,7 @@
 
 ## Chapter 7 - Convolutional Neural Networks(CNN)
 - CNN을 이용한 MNIST 숫자 분류기 구현 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/mnist_classification_using_cnn.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/mnist_classification_using_cnn_v2.py)
-- CNN을 이용한 CIFAR-10 분류기 구현 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/cifar10_classification_using_cnn.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/cifar10_classification_using_cnn.py)
+- CNN을 이용한 CIFAR-10 분류기 구현 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/cifar10_classification_using_cnn.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/cifar10_classification_using_cnn_v2.py)
 - tf.train.Saver API를 이용해서 모델과 파라미터를 저장(Save)하고 불러오기(Restore) [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/mnist_classification_using_cnn_with_tfsaver.py)
 
 ## Chapter 8 - Recurrent Neural Networks(RNN)
