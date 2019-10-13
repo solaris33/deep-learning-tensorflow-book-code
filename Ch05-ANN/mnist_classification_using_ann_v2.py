@@ -11,6 +11,8 @@ x_train, x_test = x_train.astype('float32'), x_test.astype('float32')
 x_train, x_test = x_train.reshape([-1, 784]), x_test.reshape([-1, 784])
 # [0, 255] 사이의 값을 [0, 1]사이의 값으로 Normalize합니다.
 x_train, x_test = x_train / 255., x_test / 255.
+# 레이블 데이터에 one-hot encoding을 적용합니다.
+y_train, y_test = tf.one_hot(y_train, depth=10), tf.one_hot(y_test, depth=10)
 
 # 학습을 위한 설정값들을 정의합니다.
 learning_rate = 0.001
@@ -46,7 +48,7 @@ class ANN(object):
 
 # cross-entropy 손실 함수를 정의합니다.
 @tf.function
-def create_cross_entropy_loss(logits, y):
+def cross_entropy_loss(logits, y):
   return tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=logits, labels=y))
 
 # 최적화를 위한 Adam 옵티마이저를 정의합니다.
@@ -57,7 +59,7 @@ optimizer = tf.optimizers.Adam(learning_rate)
 def train_step(model, x, y):
   with tf.GradientTape() as tape:
     y_pred = model(x)
-    loss = create_cross_entropy_loss(y_pred, y)
+    loss = cross_entropy_loss(y_pred, y)
   gradients = tape.gradient(loss, vars(model).values())
   optimizer.apply_gradients(zip(gradients, vars(model).values()))
 
@@ -78,9 +80,8 @@ for epoch in range(num_epochs):
   total_batch = int(x_train.shape[0] / batch_size)
   # 모든 배치들에 대해서 최적화를 수행합니다.
   for batch_x, batch_y in train_data:
-    batch_y = tf.one_hot(batch_y, depth=10)
     # 옵티마이저를 실행해서 파라마터들을 업데이트합니다.
-    _, current_loss = train_step(ANN_model, batch_x, batch_y), create_cross_entropy_loss(ANN_model(batch_x), batch_y)
+    _, current_loss = train_step(ANN_model, batch_x, batch_y), cross_entropy_loss(ANN_model(batch_x), batch_y)
     # 평균 손실을 측정합니다.
     average_loss += current_loss / total_batch
   # 지정된 epoch마다 학습결과를 출력합니다.
@@ -88,4 +89,4 @@ for epoch in range(num_epochs):
     print("반복(Epoch): %d, 손실 함수(Loss): %f" % ((epoch+1), average_loss))
 
 # 테스트 데이터를 이용해서 학습된 모델이 얼마나 정확한지 정확도를 출력합니다.
-print("정확도(Accuracy): %f" % compute_accuracy(ANN_model(x_test), tf.one_hot(y_test, depth=10))) # 정확도: 약 94%
+print("정확도(Accuracy): %f" % compute_accuracy(ANN_model(x_test), y_test)) # 정확도: 약 94%

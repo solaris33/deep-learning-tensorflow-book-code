@@ -25,7 +25,7 @@ hidden1_size = 256
 hidden2_size = 128
 
 # tf.data API를 이용해서 데이터를 섞고 batch 형태로 가져옵니다.
-train_data = tf.data.Dataset.from_tensor_slices((x_train, y_train))
+train_data = tf.data.Dataset.from_tensor_slices(x_train)
 train_data = train_data.shuffle(60000).batch(batch_size)
 
 # Autoencoder 모델을 정의합니다.
@@ -53,7 +53,7 @@ class AutoEncoder(object):
 
 # MSE 손실 함수를 정의합니다.
 @tf.function
-def create_mse_loss(y_pred, y_true):
+def mse_loss(y_pred, y_true):
   return tf.reduce_mean(tf.pow(y_true - y_pred, 2)) # MSE(Mean of Squared Error) 손실함수
 
 # 최적화를 위한 RMSProp 옵티마이저를 정의합니다.
@@ -66,7 +66,7 @@ def train_step(model, x):
   y_true = x
   with tf.GradientTape() as tape:
     y_pred = model(x)
-    loss = create_mse_loss(y_pred, y_true)
+    loss = mse_loss(y_pred, y_true)
   gradients = tape.gradient(loss, vars(model).values())
   optimizer.apply_gradients(zip(gradients, vars(model).values()))
 
@@ -77,9 +77,9 @@ AutoEncoder_model = AutoEncoder()
 for epoch in range(training_epochs):
   # 모든 배치들에 대해서 최적화를 수행합니다.
   # Autoencoder는 Unsupervised Learning이므로 타겟 레이블(label) y가 필요하지 않습니다.
-  for batch_x, _ in train_data:
+  for batch_x in train_data:
     # 옵티마이저를 실행해서 파라마터들을 업데이트합니다.
-    _, current_loss = train_step(AutoEncoder_model, batch_x), create_mse_loss(AutoEncoder_model(batch_x), batch_x)
+    _, current_loss = train_step(AutoEncoder_model, batch_x), mse_loss(AutoEncoder_model(batch_x), batch_x)
   # 지정된 epoch마다 학습결과를 출력합니다.
   if epoch % display_step == 0:
     print("반복(Epoch): %d, 손실 함수(Loss): %f" % ((epoch+1), current_loss))
