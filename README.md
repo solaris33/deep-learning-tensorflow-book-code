@@ -26,7 +26,7 @@
 ## Chapter 7 - Convolutional Neural Networks(CNN)
 - CNN을 이용한 MNIST 숫자 분류기 구현 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/mnist_classification_using_cnn.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/mnist_classification_using_cnn_v2.py)
 - CNN을 이용한 CIFAR-10 분류기 구현 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/cifar10_classification_using_cnn.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/cifar10_classification_using_cnn_v2.py)
-- tf.train.Saver API를 이용해서 모델과 파라미터를 저장(Save)하고 불러오기(Restore) [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/mnist_classification_using_cnn_with_tfsaver.py)
+- tf.train.Saver API를 이용해서 모델과 파라미터를 저장(Save)하고 불러오기(Restore) [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/mnist_classification_using_cnn_with_tfsaver.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/mnist_classification_using_cnn_with_tfsaver_v2.py)
 
 ## Chapter 8 - Recurrent Neural Networks(RNN)
 - tf.nn.embedding_lookup을 이용한 Embedding 예제 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch08-RNN/8.4-embedding_example.py)
@@ -50,5 +50,8 @@
 - Pre-Trained 모델을 이용해서 Object Detection 수행하기 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/tree/master/Ch13-Fine-Tuning/faster_rcnn_object_detection/object_detection)
 
 ## Revision History
+### 2019-10-18
+- Chapter 4,5,7 - TensorFlow 2.0 호환 코드 추가 - TF v2 Code
+
 ### 2019-10-06
 - Chapter 2,3 - TensorFlow 2.0 호환 코드 추가 - TF v2 Code
