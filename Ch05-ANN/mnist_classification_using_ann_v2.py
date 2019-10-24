@@ -30,7 +30,7 @@ train_data = train_data.shuffle(60000).batch(batch_size)
 
 # ANN 모델을 정의합니다.
 class ANN(object):
-  # ANN 모델을 모델을 위한 tf.Variable들을 정의합니다.
+  # ANN 모델을 위한 tf.Variable들을 정의합니다.
   def __init__(self):
     self.W1 = tf.Variable(tf.random.normal(shape=[input_size, hidden1_size]))
     self.b1 = tf.Variable(tf.random.normal(shape=[hidden1_size]))

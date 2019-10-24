@@ -21,7 +21,7 @@ train_data_iter = iter(train_data)
 
 # CNN 모델을 정의합니다.
 class CNN(object):
-  # CNN 모델을 모델을 위한 tf.Variable들을 정의합니다.
+  # CNN 모델을 위한 tf.Variable들을 정의합니다.
   def __init__(self):
     # 첫번째 Convolution Layer
     # 5x5 Kernel Size를 가진 32개의 Filter를 적용합니다.

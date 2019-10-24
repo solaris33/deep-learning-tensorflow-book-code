@@ -40,7 +40,7 @@
 - FCN.tensorflow - FCN(Fully Convolutional Networks) 모델 구현 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/tree/master/Ch10-Semantic_Image_Segmentation/FCN.tensorflow)
 
 ## Chapter 11 - 생성모델(Generative Model) - GAN(Generative Adversarial Networks)
-- GAN을 이용한 MNIST 데이터 생성 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch11-GAN/mnist_gan.py)
+- GAN을 이용한 MNIST 데이터 생성 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch11-GAN/mnist_gan.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch11-GAN/mnist_gan_v2.py)
 
 ## Chapter 12 - 강화학습(Reinforcement Learning)
 - DQN을 이용한 게임 에이전트 구현 - CatchGame [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch12-DQN/)

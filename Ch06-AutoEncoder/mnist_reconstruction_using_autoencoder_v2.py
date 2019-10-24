@@ -30,7 +30,7 @@ train_data = train_data.shuffle(60000).batch(batch_size)
 
 # Autoencoder 모델을 정의합니다.
 class AutoEncoder(object):
-  # Autoencoder 모델을 모델을 위한 tf.Variable들을 정의합니다.
+  # Autoencoder 모델을 위한 tf.Variable들을 정의합니다.
   def __init__(self):
     # 인코딩(Encoding) - 784 -> 256 -> 128
     self.W1 = tf.Variable(tf.random.normal(shape=[input_size, hidden1_size]))

@@ -28,7 +28,7 @@ test_data_iter = iter(test_data)
 
 # CNN 모델을 정의합니다.
 class CNN(object):
-  # CNN 모델을 모델을 위한 tf.Variable들을 정의합니다.
+  # CNN 모델을 위한 tf.Variable들을 정의합니다.
   def __init__(self):
     # 첫번째 convolutional layer - 하나의 RGB 이미지를 64개의 특징들(feature)으로 맵핑(maping)합니다.
     self.W_conv1 = tf.Variable(tf.random.truncated_normal(shape=[5, 5, 3, 64], stddev=5e-2))
