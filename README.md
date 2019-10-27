@@ -21,7 +21,7 @@
 
 ## Chapter 6 - 오토인코더(Autoencoder)
 - 오토인코더를 이용한 MNIST 데이터 재구축 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch06-AutoEncoder/mnist_reconstruction_using_autoencoder.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch06-AutoEncoder/mnist_reconstruction_using_autoencoder_v2.py)
-- 오토인코더 + 소프트맥스 회귀를 이용한 MNIST 숫자 분류기 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch06-AutoEncoder/mnist_classification_using_autoencoder_and_softmax_classifier.py)
+- 오토인코더 + 소프트맥스 회귀를 이용한 MNIST 숫자 분류기 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch06-AutoEncoder/mnist_classification_using_autoencoder_and_softmax_classifier.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch06-AutoEncoder/mnist_classification_using_autoencoder_and_softmax_classifier_v2.py)
 
 ## Chapter 7 - Convolutional Neural Networks(CNN)
 - CNN을 이용한 MNIST 숫자 분류기 구현 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/mnist_classification_using_cnn.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch07-CNN/mnist_classification_using_cnn_v2.py)
@@ -50,6 +50,9 @@
 - Pre-Trained 모델을 이용해서 Object Detection 수행하기 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/tree/master/Ch13-Fine-Tuning/faster_rcnn_object_detection/object_detection)
 
 ## Revision History
+### 2019-10-27
+- Chapter 6,11 - TensorFlow 2.0 호환 코드 추가 - TF v2 Code
+
 ### 2019-10-18
 - Chapter 4,5,7 - TensorFlow 2.0 호환 코드 추가 - TF v2 Code
 
