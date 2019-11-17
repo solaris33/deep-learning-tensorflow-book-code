@@ -90,8 +90,8 @@ def finetuning_train_step(autoencoder_model, softmax_classifier_model, x, y):
     y_pred_softmax = softmax_classifier_model(extracted_features)
     finetuning_loss = finetuning_cross_entropy_loss(y_pred_softmax, y)
   autoencoder_encoding_variables = [autoencoder_model.Wh_1, autoencoder_model.bh_1, autoencoder_model.Wh_2, autoencoder_model.bh_2]
-  gradients = tape.gradient(finetuning_loss, autoencoder_encoding_variables + vars(softmax_classifier_model).values())
-  finetuning_optimizer.apply_gradients(zip(gradients, autoencoder_encoding_variables + vars(softmax_classifier_model).values()))
+  gradients = tape.gradient(finetuning_loss, autoencoder_encoding_variables + list(vars(softmax_classifier_model).values()))
+  finetuning_optimizer.apply_gradients(zip(gradients, autoencoder_encoding_variables + list(vars(softmax_classifier_model).values())))
 
 # 모델의 정확도를 출력하는 함수를 정의합니다.
 @tf.function
