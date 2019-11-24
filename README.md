@@ -43,7 +43,7 @@
 - GAN을 이용한 MNIST 데이터 생성 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch11-GAN/mnist_gan.py) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch11-GAN/mnist_gan_v2.py)
 
 ## Chapter 12 - 강화학습(Reinforcement Learning)
-- DQN을 이용한 게임 에이전트 구현 - CatchGame [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch12-DQN/)
+- DQN을 이용한 게임 에이전트 구현 - CatchGame [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch12-DQN/) [(TF v2 Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch12-DQN/)
 
 ## Chapter 13 - 파인튜닝(Fine-Tuning)과 Pre-Trained 모델을 이용해서 실제 문제 해결하기
 - Inception v3 Retraining을 이용해서 나만의 분류기 만들어보기 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/tree/master/Ch13-Fine-Tuning/Inceptionv3_retraining)
