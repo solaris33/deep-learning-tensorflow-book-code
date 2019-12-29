@@ -8,17 +8,17 @@ import math
 import os
 
 # 학습에 필요한 설정값들을 선언합니다.
-epsilon = 1                 		# epsilon-Greedy 기법에 사용할 최초의 epsilon값
-epsilonMinimumValue = 0.001 		# epsilon의 최소값 (이 값 이하로 Decay하지 않습니다)
-num_actions = 3               	# 에이전트가 취할 수 있는 행동의 개수 - (좌로 움직이기, 가만히 있기, 우로 움직이기)
-num_epochs = 2000 					    # 학습에 사용할 반복횟수
-hidden_size = 128 					    # 히든레이어의 노드 개수
-maxMemory = 500 					      # Replay Memory의 크기
-batch_size = 50 					      # 학습에 사용할 배치 개수
-gridSize = 10 						      # 에이전트가 플레이하는 게임 화면 크기 (10x10 grid)
-state_size = gridSize * gridSize 	# 게임 환경의 현재상태 (10x10 grid)
-discount = 0.9 						        # Discount Factor \gamma
-learning_rate = 0.2					      # 러닝 레이트
+epsilon = 1                         # epsilon-Greedy 기법에 사용할 최초의 epsilon값
+epsilonMinimumValue = 0.001         # epsilon의 최소값 (이 값 이하로 Decay하지 않습니다)
+num_actions = 3                     # 에이전트가 취할 수 있는 행동의 개수 - (좌로 움직이기, 가만히 있기, 우로 움직이기)
+num_epochs = 2000                   # 학습에 사용할 반복횟수
+hidden_size = 128                   # 히든레이어의 노드 개수
+maxMemory = 500                     # Replay Memory의 크기
+batch_size = 50                     # 학습에 사용할 배치 개수
+gridSize = 10                       # 에이전트가 플레이하는 게임 화면 크기 (10x10 grid)
+state_size = gridSize * gridSize    # 게임 환경의 현재상태 (10x10 grid)
+discount = 0.9                      # Discount Factor \gamma
+learning_rate = 0.2                 # 러닝 레이트
 
 # s와 e사이의 랜덤한 값을 리턴하는 유틸리티 함수를 정의합니다.
 def randf(s, e):
@@ -44,7 +44,6 @@ class DQN(object):
     return tf.squeeze(output_layer)
 
 # MSE 손실 함수를 정의합니다.
-@tf.function
 def mse_loss(y_pred, y):
   return tf.reduce_sum(tf.square(y-y_pred)) / (2*batch_size)  # MSE 손실 함수
 
@@ -52,7 +51,6 @@ def mse_loss(y_pred, y):
 optimizer = tf.optimizers.SGD(learning_rate)
 
 # 최적화를 위한 function을 정의합니다.
-@tf.function
 def train_step(model, x, y):
   with tf.GradientTape() as tape:
     y_pred = model(x)
@@ -154,8 +152,6 @@ class ReplayMemory:
     self.gridSize = gridSize
     self.state_size = self.gridSize * self.gridSize
     self.discount = discount
-    canvas = np.zeros((self.gridSize, self.gridSize))
-    canvas = np.reshape(canvas, (-1,self.state_size))
     self.inputState = np.empty((self.maxMemory, 100), dtype = np.float32)
     self.actions = np.zeros(self.maxMemory, dtype = np.uint8)
     self.nextState = np.empty((self.maxMemory, 100), dtype = np.float32)
