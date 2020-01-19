@@ -31,7 +31,7 @@
 ## Chapter 8 - Recurrent Neural Networks(RNN)
 - tf.nn.embedding_lookup을 이용한 Embedding 예제 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch08-RNN/8.4-embedding_example.py)
 - Gradient Clipping 예제 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch08-RNN/8.5-linear_regression_with_gradient_clipping.py)
-- Char-RNN을 이용한 텍스트 생성 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch08-RNN/Char-RNN/)
+- Char-RNN을 이용한 텍스트 생성 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch08-RNN/Char-RNN/) [(TF v2 Keras Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Ch08-RNN/Char-RNN/train_and_sampling_v2_keras.py)
 
 ## Chapter 9 - Image Captioning
 - im2txt - Show and Tell 모델 구현 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/tree/master/Ch09-Image_Captioning/im2txt)
