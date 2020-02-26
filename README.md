@@ -35,6 +35,7 @@
 
 ## Chapter 9 - Image Captioning
 - im2txt - Show and Tell 모델 구현 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/tree/master/Ch09-Image_Captioning/im2txt)
+- show\_attend\_and\_tell - Show, Attend and Tell 모델 구현 [(TF v2 Keras Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/tree/master/Ch09-Image_Captioning/show_attend_and_tell/train_and_evaluate.py)
 
 ## Chapter 10 - Semantic Image Segmentation
 - FCN.tensorflow - FCN(Fully Convolutional Networks) 모델 구현 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/tree/master/Ch10-Semantic_Image_Segmentation/FCN.tensorflow)
