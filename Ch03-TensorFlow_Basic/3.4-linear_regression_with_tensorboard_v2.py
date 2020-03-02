@@ -28,8 +28,8 @@ def train_step(x, y):
   with tf.GradientTape() as tape:
     y_pred = linear_model(x)
     loss = mse_loss(y_pred, y)
-    with summary_writer.as_default():
-      tf.summary.scalar('loss', loss, step=optimizer.iterations)
+  with summary_writer.as_default():
+    tf.summary.scalar('loss', loss, step=optimizer.iterations)
   gradients = tape.gradient(loss, [W, b])
   optimizer.apply_gradients(zip(gradients, [W, b]))
 
