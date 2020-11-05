@@ -92,7 +92,7 @@ CNN_model = CNN()
 
 # tf.train.CheckpointManager를 이용해서 파라미터를 저장합니다.
 SAVER_DIR = "./model"
-ckpt = tf.train.Checkpoint(model=CNN_model)
+ckpt = tf.train.Checkpoint(step=tf.Variable(0), model=CNN_model)
 ckpt_manager = tf.train.CheckpointManager(
       ckpt, directory=SAVER_DIR, max_to_keep=5)
 latest_ckpt = tf.train.latest_checkpoint(SAVER_DIR)
@@ -105,16 +105,18 @@ if latest_ckpt:
   exit()
 
 # 10000 Step만큼 최적화를 수행합니다.
-for step in range(10000):
+while int(ckpt.step) < (10000 + 1):
   # 50개씩 MNIST 데이터를 불러옵니다.
   batch_x, batch_y = next(train_data_iter)
   # 100 Step마다 training 데이터셋에 대한 정확도를 출력하고 tf.train.CheckpointManager를 이용해서 파라미터를 저장합니다.
-  if step % 100 == 0:
-    ckpt_manager.save(checkpoint_number=step)
+  if ckpt.step % 100 == 0:
+    ckpt_manager.save(checkpoint_number=ckpt.step)
     train_accuracy = compute_accuracy(CNN_model(batch_x)[0], batch_y)
-    print("반복(Epoch): %d, 트레이닝 데이터 정확도: %f" % (step, train_accuracy))
+    print("반복(Epoch): %d, 트레이닝 데이터 정확도: %f" % (ckpt.step, train_accuracy))
   # 옵티마이저를 실행해 파라미터를 한스텝 업데이트합니다.
   train_step(CNN_model, batch_x, batch_y)
+
+  ckpt.step.assign_add(1)
 
 # 학습이 끝나면 테스트 데이터에 대한 정확도를 출력합니다.
 print("정확도(Accuracy): %f" % compute_accuracy(CNN_model(x_test)[0], y_test))
