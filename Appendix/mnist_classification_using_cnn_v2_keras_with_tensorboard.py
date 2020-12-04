@@ -16,7 +16,7 @@ x_train, x_test = x_train / 255., x_test / 255.
 y_train, y_test = tf.one_hot(y_train, depth=10), tf.one_hot(y_test, depth=10)
 
 # tf.data API를 이용해서 데이터를 섞고 batch 형태로 가져옵니다.
-train_data = tf.data.Dataset.from_tensor5_slices((x_train, y_train))
+train_data = tf.data.Dataset.from_tensor_slices((x_train, y_train))
 train_data = train_data.repeat().shuffle(60000).batch(50)
 train_data_iter = iter(train_data)
 
