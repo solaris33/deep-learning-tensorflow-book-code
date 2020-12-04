@@ -50,6 +50,10 @@
 - Inception v3 Retraining을 이용해서 나만의 분류기 만들어보기 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/tree/master/Ch13-Fine-Tuning/Inceptionv3_retraining)
 - Pre-Trained 모델을 이용해서 Object Detection 수행하기 [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/tree/master/Ch13-Fine-Tuning/faster_rcnn_object_detection/object_detection)
 
+## Appendix
+- CNN을 이용한 MNIST 숫자 분류기 구현 + 텐서보드(TensorBoard) [(Code)](https://github.com/solaris33/deep-learning-tensorflow-book-code/blob/master/Appendix/mnist_classification_using_cnn_v2_keras_with_tensorboard.py)
+
+
 ## Revision History
 ### 2019-10-27
 - Chapter 6,11 - TensorFlow 2.0 호환 코드 추가 - TF v2 Code
