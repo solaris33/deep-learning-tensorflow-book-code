@@ -15,7 +15,6 @@ import numpy as np
 import PIL.Image
 import time
 import functools
-import time
 
 # tensor를 이미지로 변환합니다.
 def tensor_to_image(tensor):
